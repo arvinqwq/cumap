@@ -1,0 +1,38 @@
+/* #CUMap-background{
+  width: 100vw;
+  height: 100vh;
+}
+
+#CUMap-background object{
+  width: 100%;
+  height: 100%;
+} */
+
+#wrapped-map{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#wrapped-map object{
+  position: absolute;
+  inset: 0;          /* top/right/bottom/left 全 0 */
+  width: 100%;
+  height: 100%;
+}
+
+#baseMap{
+  pointer-events: none;  /* 底图不响应鼠标，点击穿透到蒙版 */
+}
+
+#tooltip{
+  position: absolute;
+  padding: 8px 10px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  transform: translate(10px, 10px);
+  z-index: 10;
+}
